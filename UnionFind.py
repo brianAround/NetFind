@@ -38,29 +38,3 @@ class UTUnionFind:
         n = self.lookup[item]
         return self.item_list[self.uf.find(n)]
 
-
-items = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-uf = UTUnionFind(items)
-for item in items:
-    print(item, ':', uf.find(item))
-print("Creating 2 component.")
-uf.union('two', 'three')
-for item in items:
-    print(item, ':', uf.find(item))
-print("Creating 3 component.")
-uf.union('four', 'seven')
-uf.union('four', 'one')
-for item in items:
-    print(item, ':', uf.find(item))
-print("Creating 4 component.")
-uf.union("five", "nine")
-uf.union('eight', 'six')
-uf.union('five', 'six')
-for item in items:
-    print(item, ':', uf.find(item))
-
-
-
-            
-    
-
